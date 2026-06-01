@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+
+# Prebuilt artifacts not needed in source (Vercel builds from source)
+EcoVerse-build.zip
+deploy/
+
+# Misc
+*.local
+.DS_Store

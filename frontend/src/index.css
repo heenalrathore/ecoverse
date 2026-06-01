@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+    margin: 0;
+    background: #f4fbff;
+    color: #0a2a1f;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  body {
+    background:
+      radial-gradient(ellipse at top, rgba(58,174,248,.22), transparent 65%),
+      radial-gradient(ellipse at top right, rgba(63,194,144,.22), transparent 60%),
+      radial-gradient(ellipse at bottom left, rgba(255,236,150,.18), transparent 55%),
+      linear-gradient(180deg, #e7f6ff 0%, #e1f8ec 45%, #f4fbff 100%);
+  }
+  h1, h2, h3 { font-family: 'Sora', system-ui, sans-serif; letter-spacing: -0.01em; }
+  ::selection { background: rgba(63,194,144,.32); color: #0a2a1f; }
+  body.cinematic { cursor: none; }
+  button, a { cursor: none; }
+  body.cinematic input, body.cinematic textarea { cursor: text; }
+}
+
+@layer components {
+  /* Frosted-white glass for light theme */
+  .glass {
+    background: rgba(255,255,255,0.55);
+    border: 1px solid rgba(255,255,255,0.8);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    box-shadow: 0 8px 28px rgba(10,42,31,0.08);
+    color: #0a2a1f;
+  }
+  .glass-strong {
+    background: rgba(255,255,255,0.78);
+    border: 1px solid rgba(255,255,255,0.95);
+    backdrop-filter: blur(22px) saturate(160%);
+    -webkit-backdrop-filter: blur(22px) saturate(160%);
+    box-shadow: 0 14px 38px rgba(10,42,31,0.12);
+    color: #0a2a1f;
+  }
+  /* Used inside dark canvas scenes where white-on-translucent reads better */
+  .glass-dark {
+    background: rgba(16,52,36,0.62);
+    border: 1px solid rgba(166,255,193,0.30);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    color: #eafff5;
+  }
+  .neon-text {
+    text-shadow: 0 0 18px rgba(63,194,144,.45), 0 0 4px rgba(63,194,144,.6);
+  }
+  .neon-border {
+    box-shadow: inset 0 0 0 1px rgba(63,194,144,.45), 0 0 22px rgba(63,194,144,.25);
+  }
+  .gradient-text {
+    background: linear-gradient(110deg, #0a78b8 0%, #3fc290 50%, #3aaef8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+    animation: shimmer 5s linear infinite;
+  }
+  .ink   { color: #0a2a1f; }
+  .ink-2 { color: #3a5a4f; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { scrollbar-width: none; }
+}
