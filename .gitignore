@@ -12,3 +12,6 @@ deploy/
 # Misc
 *.local
 .DS_Store
+
+# Large media (host video via GitHub Releases / YouTube, not in git)
+*.mp4
